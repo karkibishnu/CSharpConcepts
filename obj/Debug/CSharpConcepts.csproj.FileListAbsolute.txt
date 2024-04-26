@@ -1,0 +1,8 @@
+C:\Users\bishn\source\repos netcore\CSharpConcepts\bin\Debug\CSharpConcepts.exe.config
+C:\Users\bishn\source\repos netcore\CSharpConcepts\bin\Debug\CSharpConcepts.exe
+C:\Users\bishn\source\repos netcore\CSharpConcepts\bin\Debug\CSharpConcepts.pdb
+C:\Users\bishn\source\repos netcore\CSharpConcepts\obj\Debug\CSharpConcepts.csproj.AssemblyReference.cache
+C:\Users\bishn\source\repos netcore\CSharpConcepts\obj\Debug\CSharpConcepts.csproj.SuggestedBindingRedirects.cache
+C:\Users\bishn\source\repos netcore\CSharpConcepts\obj\Debug\CSharpConcepts.csproj.CoreCompileInputs.cache
+C:\Users\bishn\source\repos netcore\CSharpConcepts\obj\Debug\CSharpConcepts.exe
+C:\Users\bishn\source\repos netcore\CSharpConcepts\obj\Debug\CSharpConcepts.pdb
