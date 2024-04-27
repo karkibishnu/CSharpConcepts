@@ -90,6 +90,23 @@ namespace CSharpConcepts
 
             #endregion const vs readonly and reflection
 
+            #region readonly vs static readonly
+
+            //creating instance of ReadOnlyVsStaticReadOnly class
+            ReadOnlyVsStaticReadOnly readOnlyVsStaticReadOnly = new ReadOnlyVsStaticReadOnly(5);
+
+            //accessign readonly and static readonly fields
+            Console.WriteLine($"ReadOnly Field: {readOnlyVsStaticReadOnly.ReadOnlyField}");
+            Console.WriteLine($"Static ReadOnly Field: {ReadOnlyVsStaticReadOnly.StaticReadOnlyField}");
+
+            //attempting to change value of ReadOnlyField (will result in a compile-time error)
+            //readOnlyVsStaticReadOnly.ReadOnlyField = 10;  //uncommenting this line will result in compile time error
+
+            //attempting to change the value of StaticReadOnlyField (will result in a compile-time error)
+            //ReadOnlyVsStaticReadOnly.StaticReadOnlyField = 100; //uncommenting this line will result in compile time error
+
+            #endregion readonly vs static readonly
+
             Console.ReadLine();
         }
     }
