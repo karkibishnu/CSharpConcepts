@@ -68,6 +68,28 @@ namespace CSharpConcepts
 
             #endregion Multiple value return
 
+            #region const vs readonly and reflection
+
+            //creating instance of readonly
+            ReadOnlyExample readOnlyExample = new ReadOnlyExample(10);
+            //displaying initial value of readonly field
+            Console.WriteLine($"Initial value of readonly field: {readOnlyExample.ReadOnlyField}");
+
+            //attempting to change the value of readonly field using reflection
+            readOnlyExample.ChangeReadOnlyUsingReflection(20);
+            //displaying modified field of readonly field
+            Console.WriteLine($"Modified value of readonly field: {readOnlyExample.ReadOnlyField}");
+
+            //const field requires value to be provided
+            //so uncommenting below line with result in compile time error
+            //const int MaxValue;
+            //MaxValue = 20;
+
+            const int MaxValue = 12;
+            Console.WriteLine($"Const MaxValue: {MaxValue}");
+
+            #endregion const vs readonly and reflection
+
             Console.ReadLine();
         }
     }
