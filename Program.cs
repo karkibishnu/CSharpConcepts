@@ -107,6 +107,26 @@ namespace CSharpConcepts
 
             #endregion readonly vs static readonly
 
+            #region JaggedArray
+
+            JaggedArrayExample jaggedArray = new JaggedArrayExample();
+            jaggedArray.PrintWeeklySchedule();
+
+            #endregion JaggedArray
+
+            #region String vs StringBuilder class
+
+            string s1 = "hello ";
+
+            //calling Concat1 method with string s1
+            StringBuilderVsString.Concat1(s1);
+
+            //calling concat2 method with StringBuilder s2
+            StringBuilder s2 = new StringBuilder("hello");
+            StringBuilderVsString.Concat2(s2);
+
+            #endregion String vs StringBuilder class
+
             Console.ReadLine();
         }
     }
