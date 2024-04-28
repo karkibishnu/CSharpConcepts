@@ -53,6 +53,7 @@
     <Compile Include="ReadOnlyVsStaticReadOnly.cs" />
     <Compile Include="RefAndOutExample.cs" />
     <Compile Include="StringBuilderVsString.cs" />
+    <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

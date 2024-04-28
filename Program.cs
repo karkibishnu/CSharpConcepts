@@ -127,6 +127,21 @@ namespace CSharpConcepts
 
             #endregion String vs StringBuilder class
 
+            #region Extension Methods
+            Console.WriteLine("");
+            //example sentence
+            string sentence = "Hello bishnu! this is an extension method example";
+
+            //using word counter extension method
+            int wordCount = sentence.WordCount();
+            Console.WriteLine($"Word Count: {wordCount}");
+
+            //using the reverse extension method
+            string reversedSentence = sentence.Reverse();
+            Console.WriteLine($"Reversed Sentence: {reversedSentence}");
+
+            #endregion Extension Methods
+
             Console.ReadLine();
         }
     }
