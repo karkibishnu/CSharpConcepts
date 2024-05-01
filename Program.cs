@@ -156,7 +156,7 @@ namespace CSharpConcepts
 
             #endregion hashtable
 
-            #region Calculator delegate
+            #region Delegate
 
             CalculatorDelegate calculator = new CalculatorDelegate();
 
@@ -168,7 +168,19 @@ namespace CSharpConcepts
             int result2 = calculator.PerformOperation(4, 2, CustomMultiplication);
             Console.WriteLine($"Custom Multiplication Result: {result2}");
 
-            #endregion Calcualtor delegate
+            #endregion Delegate
+
+            #region Generic
+
+            //creating instance of generic class with different data types
+            MyGenericClass<int> intInstance = new MyGenericClass<int>(10);
+            MyGenericClass<string> stringInstance = new MyGenericClass<string>("Hello World");
+
+            //calling methods of generic class instance
+            intInstance.DisplayValue();
+            stringInstance.DisplayValue();
+
+            #endregion Generic
 
             Console.ReadLine();
         }
