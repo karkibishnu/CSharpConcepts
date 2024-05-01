@@ -150,6 +150,12 @@ namespace CSharpConcepts
 
             #endregion SortedList and SortedDictionary
 
+            #region hashtable
+
+            HashtableExample.HashtableOperation();
+
+            #endregion hashtable
+
             Console.ReadLine();
         }
     }

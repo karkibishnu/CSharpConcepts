@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DaysOfWeekENUM.cs" />
+    <Compile Include="HashtableExample.cs" />
     <Compile Include="JaggedArrayExample.cs" />
     <Compile Include="MultiExceptionFilter.cs" />
     <Compile Include="MultiReturn.cs" />
