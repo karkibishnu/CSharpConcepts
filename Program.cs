@@ -156,7 +156,34 @@ namespace CSharpConcepts
 
             #endregion hashtable
 
+            #region Calculator delegate
+
+            CalculatorDelegate calculator = new CalculatorDelegate();
+
+            //perform addition with custom callback
+            int result1 = calculator.PerformOperation(5, 3, CustomAddition);
+            Console.WriteLine($"Custom Addition Result: {result1}");
+
+            //perform multiplication with custom callback
+            int result2 = calculator.PerformOperation(4, 2, CustomMultiplication);
+            Console.WriteLine($"Custom Multiplication Result: {result2}");
+
+            #endregion Calcualtor delegate
+
             Console.ReadLine();
+        }
+
+        //callback method for custom addition
+        static int CustomAddition(int x, int y)
+        {
+            //perform addition with custom logic
+            return x + y + 10;
+        }
+
+        static int CustomMultiplication(int x, int y)
+        {
+            //perform multiplication with custom logic
+            return x * y * 2;
         }
     }
 }

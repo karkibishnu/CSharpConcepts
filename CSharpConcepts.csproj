@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculatorDelegate.cs" />
     <Compile Include="DaysOfWeekENUM.cs" />
     <Compile Include="HashtableExample.cs" />
     <Compile Include="JaggedArrayExample.cs" />
