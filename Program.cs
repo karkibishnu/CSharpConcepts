@@ -184,6 +184,12 @@ namespace CSharpConcepts
             intInstance.GetGenericTypeInformation(intInstance);
             stringInstance.GetGenericTypeInformation(stringInstance);
 
+            CalculatorGeneric calGeneric = new CalculatorGeneric();
+
+            int intResult = calGeneric.Add(5, 10);
+            Console.WriteLine($"Integer result: {intResult}");
+            float floatResult = calGeneric.Add(3.5f, 2.1f);
+            Console.WriteLine($"Float result: {floatResult}");
             #endregion Generic
 
             Console.ReadLine();
