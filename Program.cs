@@ -180,6 +180,10 @@ namespace CSharpConcepts
             intInstance.DisplayValue();
             stringInstance.DisplayValue();
 
+            //getting type information of generic instances
+            intInstance.GetGenericTypeInformation(intInstance);
+            stringInstance.GetGenericTypeInformation(stringInstance);
+
             #endregion Generic
 
             Console.ReadLine();
