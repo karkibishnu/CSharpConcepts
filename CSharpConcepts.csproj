@@ -52,6 +52,7 @@
     <Compile Include="ReadOnlyExample.cs" />
     <Compile Include="ReadOnlyVsStaticReadOnly.cs" />
     <Compile Include="RefAndOutExample.cs" />
+    <Compile Include="SortedListAndDictionary.cs" />
     <Compile Include="StringBuilderVsString.cs" />
     <Compile Include="StringExtensions.cs" />
   </ItemGroup>

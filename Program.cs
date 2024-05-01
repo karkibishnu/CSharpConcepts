@@ -142,6 +142,14 @@ namespace CSharpConcepts
 
             #endregion Extension Methods
 
+            #region SortedList and SortedDictionary
+
+            SortedListAndDictionary sortedListAndDictionary = new SortedListAndDictionary();
+            sortedListAndDictionary.SortedListOperation();
+            sortedListAndDictionary.SortedDictionaryOperation();
+
+            #endregion SortedList and SortedDictionary
+
             Console.ReadLine();
         }
     }
