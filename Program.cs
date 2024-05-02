@@ -168,6 +168,24 @@ namespace CSharpConcepts
             int result2 = calculator.PerformOperation(4, 2, CustomMultiplication);
             Console.WriteLine($"Custom Multiplication Result: {result2}");
 
+            //multicast delegate
+            CustomCallback hiDel, byeDel, addDel, minusDel;
+
+            hiDel = MulticastDelegate.Hello;
+            byeDel = MulticastDelegate.Goodbye;
+
+            addDel = hiDel + byeDel;
+
+            minusDel = addDel - hiDel;
+            Console.WriteLine("Invoking delegate hiDel:");
+            hiDel("A");
+            Console.WriteLine("Invoking delegate byDel:");
+            byeDel("B");
+            Console.WriteLine("Invoking delegate addDel:");
+            addDel("C");
+            Console.WriteLine("Invoking delegate minusDel:");
+            minusDel("D");
+
             #endregion Delegate
 
             #region Generic
@@ -191,6 +209,34 @@ namespace CSharpConcepts
             float floatResult = calGeneric.Add(3.5f, 2.1f);
             Console.WriteLine($"Float result: {floatResult}");
             #endregion Generic
+
+            #region Event and event handler
+
+            //create instance of the publisher
+            EventPublisher publisher = new EventPublisher();
+            //create instance of the subscriber
+            EventSubscriber subscriber = new EventSubscriber();
+
+            //subscribe to the event by adding an event handler method
+            
+            //publisher.MyEvent: this part accesses the `MyEvent` event of 
+            //the `publisher` object. `MyEvent` is an event defined in the 
+            //`EventPublisher` class
+
+            //+= is the event subscription operator. It is used to add an 
+            //event handler to the event. When you use +=, you are subscribing
+            //to the event which means you are adding a method that should 
+            //execute when event occurs
+
+            //`subscriber.HandleEvent` referes to HandleEvent method of the 
+            //subscriber object. HandleEvent is a method defined in the 
+            //EventSubscriber class. This method will execute when MyEvent is raised
+            publisher.MyEvent += subscriber.HandleEvent;
+
+            //raise the event
+            publisher.RaiseEvent("Hello Bishnu!!");
+
+            #endregion Event and event handler
 
             Console.ReadLine();
         }

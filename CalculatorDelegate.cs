@@ -9,6 +9,7 @@ namespace CSharpConcepts
     //delegate that takes two integers as input params
     //returns an integer result
     delegate int ArithmeticOperation(int x, int y);
+    public delegate int PerformCalculation(int x, int y);
     class CalculatorDelegate
     {
         //method to perform arithmetic operation using provided callback

@@ -46,7 +46,11 @@
     <Compile Include="CalculatorDelegate.cs" />
     <Compile Include="CalculatorGeneric.cs" />
     <Compile Include="DaysOfWeekENUM.cs" />
+    <Compile Include="EventPublisher.cs" />
+    <Compile Include="EventSubscriber.cs" />
     <Compile Include="ICalculable.cs" />
+    <Compile Include="MulticastDelegate.cs" />
+    <Compile Include="MyEventArgs.cs" />
     <Compile Include="MyGenericClass.cs" />
     <Compile Include="HashtableExample.cs" />
     <Compile Include="JaggedArrayExample.cs" />
