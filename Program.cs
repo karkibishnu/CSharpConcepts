@@ -33,7 +33,7 @@ namespace CSharpConcepts
             //using ref to increment a variable
             int num = 10;
             refAndOut.IncrementUsingRef(ref num); //increment num by 1
-            Console.WriteLine($"Incremented value using ref: {num}" );
+            Console.WriteLine($"Incremented value using ref: {num}");
 
             //using out param to calculate quotient and remainder
             int result;
@@ -218,7 +218,7 @@ namespace CSharpConcepts
             EventSubscriber subscriber = new EventSubscriber();
 
             //subscribe to the event by adding an event handler method
-            
+
             //publisher.MyEvent: this part accesses the `MyEvent` event of 
             //the `publisher` object. `MyEvent` is an event defined in the 
             //`EventPublisher` class
@@ -238,7 +238,132 @@ namespace CSharpConcepts
 
             #endregion Event and event handler
 
+            #region Singleton
+
+            Parallel.Invoke(
+                () => PrintStudentDetails(),
+                () => PrintEmployeeDetails());
+
+            Parallel.Invoke(
+                () => PrintStudentDetailsEager(),
+                () => PrintEmployeeDetailsEager());
+
+            Parallel.Invoke(
+                () => PrintStudentDetailsLazy(),
+                () => PrintEmployeeDetailsLazy());
+
+            Parallel.Invoke(
+                () => PrintStudentDetailsNoThreadSafe(),
+                () => PrintEmployeeDetailsNoThreadSafe());
+
+            Parallel.Invoke(
+
+                () => PrintStudentDetailsThreadSafe(),
+                () => PrintEmployeeDetailsThreadSafe());
+
+            #endregion Singleton
+
             Console.ReadLine();
+        }
+
+        private static void PrintEmployeeDetails()
+        {
+            /*
+                * assuming Singleton is created from employee class
+                * we refer to the GetInstance property from the Singleton class
+            */
+            Singleton fromStudent = Singleton.GetInstance;
+            fromStudent.PrintDetails("From Employee");
+        }
+
+        private static void PrintStudentDetails()
+        {
+            /*
+                * assuming Singleton is created from the student class
+                * we refer to the GetInstance property from the Singleton class
+            */
+            Singleton fromEmployee = Singleton.GetInstance;
+            fromEmployee.PrintDetails("From Student");
+        }
+
+        private static void PrintEmployeeDetailsEager()
+        {
+            /*
+                * assuming Singleton is created from employee class
+                * we refer to the GetInstance property from the Singleton class
+            */
+            SingletonEager fromStudent = SingletonEager.GetInstance;
+            fromStudent.PrintDetails("From Employee");
+        }
+
+        private static void PrintStudentDetailsEager()
+        {
+            /*
+                * assuming Singleton is created from the student class
+                * we refer to the GetInstance property from the Singleton class
+            */
+            SingletonEager fromEmployee = SingletonEager.GetInstance;
+            fromEmployee.PrintDetails("From Student");
+        }
+
+        private static void PrintEmployeeDetailsLazy()
+        {
+            /*
+                * assuming Singleton is created from employee class
+                * we refer to the GetInstance property from the Singleton class
+            */
+            SingletonLazy fromStudent = SingletonLazy.GetInstance;
+            fromStudent.PrintDetails("From Employee");
+        }
+
+        private static void PrintStudentDetailsLazy()
+        {
+            /*
+                         * assuming Singleton is created from the student class
+                         * we refer to the GetInstance property from the Singleton class
+                        */
+            SingletonLazy fromEmployee = SingletonLazy.GetInstance;
+            fromEmployee.PrintDetails("From Student");
+        }
+
+        private static void PrintEmployeeDetailsNoThreadSafe()
+        {
+            /*
+                * assuming Singleton is created from employee class
+                * we refer to the GetInstance property from the Singleton class
+            */
+            SingletonNoThreadSafe fromStudent = SingletonNoThreadSafe.GetInstance;
+            fromStudent.PrintDetails("From Employee");
+        }
+
+        private static void PrintStudentDetailsNoThreadSafe()
+        {
+            /*
+                         * assuming Singleton is created from the student class
+                         * we refer to the GetInstance property from the Singleton class
+                        */
+            SingletonNoThreadSafe fromEmployee = SingletonNoThreadSafe.GetInstance;
+            fromEmployee.PrintDetails("From Student");
+        }
+
+        private static void PrintEmployeeDetailsThreadSafe()
+        {
+            /*
+                * assuming Singleton is created from employee class
+                * we refer to the GetInstance property from the Singleton class
+            */
+            SingletonThreadSafe fromStudent = SingletonThreadSafe.GetInstance;
+            fromStudent.PrintDetails("From Employee");
+        }
+
+        private static void PrintStudentDetailsThreadSafe()
+        {
+            /*
+                         * assuming Singleton is created from the student class
+                         * we refer to the GetInstance property from the Singleton class
+                        */
+            SingletonThreadSafe fromEmployee = SingletonThreadSafe.GetInstance;
+            fromEmployee.PrintDetails("From Student");
         }
 
         //callback method for custom addition

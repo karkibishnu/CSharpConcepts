@@ -61,6 +61,11 @@
     <Compile Include="ReadOnlyExample.cs" />
     <Compile Include="ReadOnlyVsStaticReadOnly.cs" />
     <Compile Include="RefAndOutExample.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="SingletonEager.cs" />
+    <Compile Include="SingletonLazy.cs" />
+    <Compile Include="SingletonNoThreadSafe.cs" />
+    <Compile Include="SingletonThreadSafe.cs" />
     <Compile Include="SortedListAndDictionary.cs" />
     <Compile Include="StringBuilderVsString.cs" />
     <Compile Include="StringExtensions.cs" />
