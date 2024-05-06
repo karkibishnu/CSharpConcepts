@@ -49,6 +49,7 @@
     <Compile Include="EventPublisher.cs" />
     <Compile Include="EventSubscriber.cs" />
     <Compile Include="ExceptionHandler.cs" />
+    <Compile Include="ExpressionUsingStack.cs" />
     <Compile Include="ICalculable.cs" />
     <Compile Include="MulticastDelegate.cs" />
     <Compile Include="MyEventArgs.cs" />

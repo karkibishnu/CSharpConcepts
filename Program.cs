@@ -327,21 +327,24 @@ namespace CSharpConcepts
 
             //#endregion Exceptions
 
-            #region polymorphism
+            //#region polymorphism
 
-            Animal animal = new Animal();
-            Animal dog = new Dog();
-            Animal cat = new Cat();
+            //Animal animal = new Animal();
+            //Animal dog = new Dog();
+            //Animal cat = new Cat();
 
-            animal.MakeSound();
-            dog.MakeSound();
-            cat.MakeSound();
+            //animal.MakeSound();
+            //dog.MakeSound();
+            //cat.MakeSound();
 
-            Animal animal1 = new Horse();
-            animal1.MakeSound();
-            ((Horse)animal1).MakeSound();    
+            //Animal animal1 = new Horse();
+            //animal1.MakeSound();
+            //((Horse)animal1).MakeSound();    
 
-            #endregion polymorphism
+            //#endregion polymorphism
+
+            bool expresionMatching = ExpressionUsingStack.CheckIncomingExpression("{[(){}]}}");
+            Console.WriteLine($"Expression matching: {expresionMatching}");
 
             Console.ReadLine();
         }
