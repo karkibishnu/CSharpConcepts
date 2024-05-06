@@ -57,6 +57,7 @@
     <Compile Include="JaggedArrayExample.cs" />
     <Compile Include="MultiExceptionFilter.cs" />
     <Compile Include="MultiReturn.cs" />
+    <Compile Include="PolymorphismConcept.cs" />
     <Compile Include="PrinterSpoolerSingleton.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -294,38 +294,54 @@ namespace CSharpConcepts
 
             //#endregion PrinterSpooler Singleton
 
-            #region Exceptions
+            //#region Exceptions
 
-            ExceptionHandler.HandleExceptions(() =>
-            {
-                //code that may throw exceptions
-                int[] numbers = { 1, 2, 3 };
-                Console.WriteLine(numbers[4]); //trying to access an out of range index
-            });
+            //ExceptionHandler.HandleExceptions(() =>
+            //{
+            //    //code that may throw exceptions
+            //    int[] numbers = { 1, 2, 3 };
+            //    Console.WriteLine(numbers[4]); //trying to access an out of range index
+            //});
 
-            try
-            {
-                Console.WriteLine("Exception using throw");
-                ThrowVsThrowExException.DivideByZeroThrow(10, 0);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Exception caught at top level: {ex.StackTrace}");
-            }
-            Console.WriteLine();
+            //try
+            //{
+            //    Console.WriteLine("Exception using throw");
+            //    ThrowVsThrowExException.DivideByZeroThrow(10, 0);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine($"Exception caught at top level: {ex.StackTrace}");
+            //}
+            //Console.WriteLine();
 
 
-            try
-            {
-                Console.WriteLine("Exception using throw ex");
-                ThrowVsThrowExException.DivideByZeroThrowEx(10, 0);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Exception caught at top level: {ex.StackTrace}");
-            }
+            //try
+            //{
+            //    Console.WriteLine("Exception using throw ex");
+            //    ThrowVsThrowExException.DivideByZeroThrowEx(10, 0);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine($"Exception caught at top level: {ex.StackTrace}");
+            //}
 
-            #endregion Exceptions
+            //#endregion Exceptions
+
+            #region polymorphism
+
+            //Animal animal = new Animal();
+            //Animal dog = new Dog();
+            //Animal cat = new Cat();
+
+            //animal.MakeSound();
+            //dog.MakeSound();
+            //cat.MakeSound();
+
+            Animal animal = new Horse();
+            animal.MakeSound();
+            ((Horse)animal).MakeSound();    
+
+            #endregion polymorphism
 
             Console.ReadLine();
         }
