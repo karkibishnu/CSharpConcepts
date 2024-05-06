@@ -275,25 +275,57 @@ namespace CSharpConcepts
 
             //#endregion static conversion
 
+            //#region PrinterSpooler Singleton
 
-            #region PrinterSpooler Singleton
+            ////get singleton instance of the print spooler
+            //PrinterSpoolerSingleton spooler = PrinterSpoolerSingleton.GetInstance();
 
-            //get singleton instance of the print spooler
-            PrinterSpoolerSingleton spooler = PrinterSpoolerSingleton.GetInstance();
+            ////add some print jobs
+            //spooler.AddJob("Document 1");
+            //spooler.AddJob("Document 2");
+            //spooler.AddJob("Document 3");
 
-            //add some print jobs
-            spooler.AddJob("Document 1");
-            spooler.AddJob("Document 2");
-            spooler.AddJob("Document 3");
+            ////process the print jobs
+            //spooler.ProcessJobs();
 
-            //process the print jobs
-            spooler.ProcessJobs();
+            ////trying to create another instance will return the same instance
+            //PrinterSpoolerSingleton spooler2 = PrinterSpoolerSingleton.GetInstance();
+            //Console.WriteLine($"spooler == spooler2 {spooler == spooler2}");
 
-            //trying to create another instance will return the same instance
-            PrinterSpoolerSingleton spooler2 = PrinterSpoolerSingleton.GetInstance();
-            Console.WriteLine($"spooler == spooler2 {spooler == spooler2}");
+            //#endregion PrinterSpooler Singleton
 
-            #endregion PrinterSpooler Singleton
+            #region Exceptions
+
+            ExceptionHandler.HandleExceptions(() =>
+            {
+                //code that may throw exceptions
+                int[] numbers = { 1, 2, 3 };
+                Console.WriteLine(numbers[4]); //trying to access an out of range index
+            });
+
+            try
+            {
+                Console.WriteLine("Exception using throw");
+                ThrowVsThrowExException.DivideByZeroThrow(10, 0);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception caught at top level: {ex.StackTrace}");
+            }
+            Console.WriteLine();
+
+
+            try
+            {
+                Console.WriteLine("Exception using throw ex");
+                ThrowVsThrowExException.DivideByZeroThrowEx(10, 0);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception caught at top level: {ex.StackTrace}");
+            }
+
+            #endregion Exceptions
 
             Console.ReadLine();
         }

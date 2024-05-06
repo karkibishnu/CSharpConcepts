@@ -48,6 +48,7 @@
     <Compile Include="DaysOfWeekENUM.cs" />
     <Compile Include="EventPublisher.cs" />
     <Compile Include="EventSubscriber.cs" />
+    <Compile Include="ExceptionHandler.cs" />
     <Compile Include="ICalculable.cs" />
     <Compile Include="MulticastDelegate.cs" />
     <Compile Include="MyEventArgs.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="StaticConverter.cs" />
     <Compile Include="StringBuilderVsString.cs" />
     <Compile Include="StringExtensions.cs" />
+    <Compile Include="ThrowVsThrowExException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
