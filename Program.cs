@@ -329,17 +329,17 @@ namespace CSharpConcepts
 
             #region polymorphism
 
-            //Animal animal = new Animal();
-            //Animal dog = new Dog();
-            //Animal cat = new Cat();
+            Animal animal = new Animal();
+            Animal dog = new Dog();
+            Animal cat = new Cat();
 
-            //animal.MakeSound();
-            //dog.MakeSound();
-            //cat.MakeSound();
-
-            Animal animal = new Horse();
             animal.MakeSound();
-            ((Horse)animal).MakeSound();    
+            dog.MakeSound();
+            cat.MakeSound();
+
+            Animal animal1 = new Horse();
+            animal1.MakeSound();
+            ((Horse)animal1).MakeSound();    
 
             #endregion polymorphism
 
