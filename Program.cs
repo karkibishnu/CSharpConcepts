@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CSharpConcepts
@@ -343,9 +344,19 @@ namespace CSharpConcepts
 
             //#endregion polymorphism
 
-            bool expresionMatching = ExpressionUsingStack.CheckIncomingExpression("{[(){}]}}");
-            Console.WriteLine($"Expression matching: {expresionMatching}");
+            //bool expresionMatching = ExpressionUsingStack.CheckIncomingExpression("{[(){}]}}");
+            //Console.WriteLine($"Expression matching: {expresionMatching}");
 
+            #region Threading 
+
+            //Threading.MainThread();
+
+            //MultithreadDownload.DownloadFiles();
+
+            ThreadSyncWithLock.SynchronizationWithLock();
+            ThreadSyncWithoutLock.SynchronizationWithoutLock();
+
+            #endregion Threading
             Console.ReadLine();
         }
 
